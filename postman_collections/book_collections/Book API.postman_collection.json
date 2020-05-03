@@ -1,0 +1,42 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Book API",
+		"_postman_id": "40179389-df6b-f54b-0dc5-f0de218b33bb",
+		"description": "Book API Collection developed for tests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Save new Book",
+			"request": {
+				"url": "{{env}}/api/v1/books",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \n\t\"name\": \"Investidor Inteligente\",\n\t\"pages\": 200,\n\t\"chapters\": 20,\n\t\"isbn\": \"0-596-52068-9\",\n\t\"publisherName\": \"Harper Collins\",\n\t\"author\": {\n\t\t\"name\": \"Benjamin Graham\",\n\t\t\"age\": 100\n\t}\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get Book by ID",
+			"request": {
+				"url": "{{env}}/api/v1/books/2",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
